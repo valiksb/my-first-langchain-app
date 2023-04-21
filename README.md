@@ -3,7 +3,12 @@ Activate your conda environment, in my case *my-first-langchain-app*
 ```shell
 conda activate my-first-langchain-app
 ```
-I got an error because with the certs 
+When I tried this step from the link below
+```shell
+conda install langchain -c conda-forge
+```
+https://python.langchain.com/en/latest/getting_started/getting_started.html#installation
+I got this error
 ```
 Collecting package metadata (current_repodata.json): failed
 
@@ -11,11 +16,7 @@ CondaSSLError: Encountered an SSL error. Most likely a certificate verification 
 
 Exception: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/osx-64/current_repodata.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))`
 ```
-when I tried
-https://python.langchain.com/en/latest/getting_started/getting_started.html#installation
-```shell
-conda install langchain -c conda-forge
-```
+
 To solve this issue I followed these steps on My Mac (thanks to folks that provide a solution, https://stackoverflow.com/questions/39356413/how-to-add-a-custom-ca-root-certificate-to-the-ca-store-used-by-pip-in-windows)
 0.
 ```shell
